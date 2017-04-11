@@ -1,0 +1,530 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+
+
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+
+/*
+ *  FONTS
+ */
+@font-face {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/*
+ *  GLOBAL STYLES
+ */
+html {
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    color: #000;
+}
+
+header,
+main,
+footer {
+    text-align: center;
+}
+
+main p {
+    letter-spacing: -0.03em;
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/*
+ *  CLASSES TO TARGET SPECIFIC ELEMENTS
+ */
+.togetherText {
+    height: 6.25rem;
+    /* Verify correct link */
+    background-image: url(../assets/images/together-circle.svg);
+    background-repeat: no-repeat;
+    background-size: 12.06rem;
+    background-position: center;
+}
+
+@media only screen and (min-width: 80rem) {
+    .togetherText {
+        height: 7.88rem;
+        background-size: 15.25rem;
+    }
+}
+
+.aloneText {
+    position: relative;
+    display: inline-block;
+}
+
+.aloneText:after {
+    width: 3.75rem;
+    height: 0.5625rem;
+    content: " ";
+    position: absolute;
+    top: 47%;
+    right: 0;
+    /* Verify correct link */
+    background-image: url(../assets/images/alone-strikethrough.svg);
+    background-size: 3.75rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media only screen and (min-width: 60rem) {
+    .aloneText:after {
+        top: 53%;
+        right: 10%;
+    }
+}
+
+@media only screen and (min-width: 80rem) {
+    .aloneText:after {
+        width: 5rem;
+        height: 11px;
+        background-size: 5rem;
+        top: 52%;
+    }
+}
+
+.soonerLaterText {
+    width: 30%;
+}
+
+@media only screen and (min-width: 90rem) {
+    .soonerLaterText {
+        width: 100%;
+    }
+}
+
+.lifeIsBusyText {
+    font-size: 2.5rem;
+}
+
+@media only screen and (min-width: 48rem) {
+    .lifeIsBusyText {
+        font-size: 7vw;
+    }
+}
+
+@media only screen and (min-width: 90rem) {
+    .lifeIsBusyText {
+        font-size: 6.25rem;
+    }
+}
+
+.oneSixtyEightText {
+    font-size: 10rem;
+}
+
+@media only screen and (min-width: 48rem) {
+    .oneSixtyEightText  {
+        font-size: 27vw;
+    }
+}
+
+@media only screen and (min-width: 90rem) {
+    .oneSixtyEightText  {
+        font-size: 25rem;
+    }
+}
+
+.socialNav {
+    margin-top: 12.5rem;
+    margin-bottom: 12.5rem;
+}
+
+@media only screen and (min-width: 90rem) {
+    .socialNav {
+        margin-top: 18.75rem;
+        margin-bottom: 31.25rem;
+    }
+}
+
+.socialIcon {
+    opacity: 0.5;
+    -moz-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.socialIcon:hover {
+    opacity: 1;
+}
+
+.socialTwitter {
+    width: 1.375rem;
+    margin-right: 6.25rem;
+    /* Verify correct link */
+    background-image: url(../assets/images/github.svg);
+    background-size: 1.375rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.socialInstagram {
+    width: 1.375rem;
+    /* Verify correct link */
+    background-image: url(../assets/images/dropbox.svg);
+    background-size: 1.375rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Full bleed black colored background sections */
+.full-bleed-bg {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vw;
+    max-height: 900px;
+}
+
+@media only screen and (min-width: 48rem) {
+    .full-bleed-bg {
+        height: 60vw;
+    }
+}
+
+@media only screen and (min-width: 90rem) {
+    .full-bleed-bg {
+        height: 62vw;
+    }
+}
+
+/* Non full bleed sections */
+.floating-bg {
+    /* fallback for calc */
+    width: 89%;
+    width: calc(100% - 40px);
+    height: 89vw;
+    max-height: 738px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 48rem) {
+    .floating-bg {
+        width: 85vw;
+        height: 51vw;
+        font-size: 3.13vw;
+    }
+}
+
+@media only screen and (min-width: 90rem) {
+    .floating-bg {
+        width: calc(100% - 260px);
+        font-size: 5rem;
+    }
+}
+
+.emoji {
+    width: 1.875rem;
+}
+
+@media only screen and (min-width: 90rem) {
+    .emoji {
+        width: 2.5rem;
+    }
+}
+
+.lh-tighter { line-height: 1.1; }
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/* Most styling is applied using the classes below */
+
+
+/*
+ *  FONTS
+ */
+.fw-light   { font-family: "Rubik", "Helvetica Neue", Helvetica, sans-serif; }
+.fw-regular { font-family: "Rubik", "Helvetica Neue", Helvetica, sans-serif; }
+.fw-medium  { font-family: "Rubik", "Helvetica Neue", Helvetica, sans-serif; }
+.fw-bold    { font-family: "Rubik", "Helvetica Neue", Helvetica, sans-serif; }
+
+
+/*
+ *  FONT SIZES
+ */
+
+/* font size up to vw 768 */
+.fs-small   { font-size: 0.75rem; }
+.fs-regular { font-size: 6.4vw;  }
+.fs-large   {
+    font-weight: 500;
+    font-size: 12.8vw;
+    letter-spacing: -0.035em;
+}
+
+/* font size up to vw 1024 */
+@media only screen and (min-width: 48rem) {
+    .fs-small   { font-size: 1.55vw; }
+    .fs-regular { font-size: 3.13vw; }
+    .fs-large   { font-size: 9.9vw;  }
+}
+
+/* font size up to vw 1440 */
+@media only screen and (min-width: 64rem) {
+    /* smallest font size fixed at this breakpoint */
+    .fs-small   { font-size: 1.25rem; }
+    .fs-regular { font-size: 2.8vw;     }
+    .fs-large   { font-size: 7vw;     }
+}
+
+/* fixed at vw 1440 */
+@media only screen and (min-width: 90rem) {
+    .fs-regular { font-size: 2.5rem;  }
+    .fs-large   { font-size: 10rem;   }
+}
+
+
+/*
+ *  TEXT COLORS
+ */
+.text-white { color: #fff;    }
+.text-green { color: #06D677; }
+.text-blue  { color: #4008E3; }
+.text-red   { color: #FD2542; }
+
+.text-green>a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.text-green>a:hover {
+  text-decoration: underline;
+}
+
+
+/*
+ *  BACKGROUND COLORS
+ */
+.bg-black { background-color: #000;    }
+.bg-blue  { background-color: #DCE9FF; }
+.bg-red   { background-color: #FFE9EC; }
+
+
+/*
+ *  SPACING - MARGIN TOP
+ */
+
+/* fixed size on mobile up to 768 */
+.mt-xsmall  { margin-top: 2.5rem;  }
+.mt-small   { margin-top: 3.125rem;  }
+.mt-regular { margin-top: 6.25rem; }
+.mt-medium  { margin-top: 9.375rem; }
+/* relative to ensure text elements peek above fold on mobile as visual cue to scroll */
+.mt-large   { margin-top: 27vh; }
+
+/* scales relative to vw at 768 up to 1440 */
+@media only screen and (min-width: 48rem) {
+    .mt-xsmall  { margin-top: 4vw;  }
+    .mt-small   { margin-top: 5vw;  }
+    .mt-regular { margin-top: 10vw; }
+    .mt-medium  { margin-top: 16vw; }
+    .mt-large   { margin-top: 18vw; }
+}
+
+/* fixed at vw 1440 */
+@media only screen and (min-width: 90rem) {
+    .mt-xsmall  { margin-top: 6.25rem;  }
+    .mt-small   { margin-top: 7.5rem; }
+    .mt-regular { margin-top: 12.5rem; }
+    .mt-medium  { margin-top: 18.75rem; }
+    .mt-large   { margin-top: 25rem; }
+}
+
+/*
+ *  POSITIONING
+ */
+.vertically-center-children {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+ *  DISPLAY
+ */
+.inline-block { display: inline-block; }
+
+.image-replacement {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+}
